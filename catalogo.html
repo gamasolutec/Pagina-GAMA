@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo · GAMA</title>
+  <link rel="icon" href="imagenes/Logo-circulo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  
+  <!-- Librerías de Animación GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- Fondo de Circuito Vectorial -->
+<svg class="circuit-bg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+  <g fill="none" stroke="#2f9bff" stroke-width="1">
+    <path d="M0 120 H180 L220 160 H420" />
+    <path d="M1440 260 H1250 L1210 300 H1000" stroke="#9b4dff"/>
+    <path d="M0 780 H240 L280 740 H520" stroke="#ff2fae"/>
+    <path d="M1440 640 H1180 L1140 600 H900" stroke="#2f9bff"/>
+  </g>
+  <g fill="#2f9bff"><circle cx="180" cy="120" r="3"/><circle cx="420" cy="160" r="3"/></g>
+  <g fill="#9b4dff"><circle cx="1250" cy="260" r="3"/><circle cx="1000" cy="300" r="3"/></g>
+  <g fill="#ff2fae"><circle cx="240" cy="780" r="3"/><circle cx="520" cy="740" r="3"/></g>
+</svg>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <img class="brand-mark" src="imagenes/Logo-circulo.png" alt="Logo GAMA">
+      <div class="brand-text">
+        <span class="word">GAMA</span>
+        <span class="tag">SOLUCIONES TECNOLÓGICAS</span>
+      </div>
+    </div>
+    <nav class="links" id="navLinks">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html" class="active">Catálogo de páginas</a> 
+        <a href="soporte.html">Soporte Técnico</a>
+        <a href="contactanos.html">Contáctanos</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="view">
+    <div class="section-pad">
+      <div class="section-title">
+        <div class="section-title-badge">Catálogo de páginas</div>
+        <h2>Catálogo de páginas</h2>
+        <p class="lede">Desde páginas visuales de una sola vista hasta aplicaciones con base de datos y procesamiento real de información: todas nuestras soluciones web en un solo lugar.</p>
+      </div>
+
+      <div class="svc-grid">
+        <!-- Menús -->
+        <div class="svc-card" data-key="menu">
+          <div class="card-inner">
+            <div class="svc-left">
+              <div class="svc-head">
+                <div class="svc-tagcolor">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#ff2fae" stroke-width="2"><path d="M7 3v8M5 3v4a2 2 0 002 2 2 2 0 002-2V3M17 3c-2 1-3 3-3 6s1 5 3 6v6"/></svg>
+                </div>
+                <div>
+                  <h3>Menús digitales</h3>
+                  <div class="sub">Para restaurantes y cafeterías</div>
+                </div>
+              </div>
+              <div class="tier-tabs">
+                <button class="tier-tab active" data-tier="basico">Básico</button>
+                <button class="tier-tab" data-tier="intermedio">Intermedio</button>
+                <button class="tier-tab" data-tier="alto">Alto</button>
+              </div>
+              <div class="tier-price"><span class="amt">$3,500</span><span class="per">MXN</span></div>
+              <p class="tier-desc">Menú digital esencial en 1 interfaz, listo para compartir por QR o redes.</p>
+            </div>
+            <div class="svc-right">
+              <div class="mock">
+                <div class="mock-title">MENÚ ESPECIAL</div>
+                <div class="mock-row"><span>Bruschetta</span><span>$120</span></div>
+                <div class="mock-row"><span>Ribeye al grill</span><span>$240</span></div>
+                <div class="mock-row"><span>Cheesecake</span><span>$100</span></div>
+              </div>
+              <ul class="feat-list">
+                <li>1 interfaz (Página principal / Landing de exhibición).</li>
+                <li>Hasta 15 productos.</li>
+                <li>Código QR personalizado.</li>
+                <li>Diseño responsivo (adaptable a celulares y tablets).</li>
+              </ul>
+              <div class="card-footer">
+                <div class="note-tag"><b>NOTA:</b> Actualizaciones de productos o diseño son aparte con costo extra.</div>
+                <div class="adicional-tag"></div>
+                <div class="ideal-tag">IDEAL PARA: restaurantes, cafés, food trucks</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catálogos -->
+        <div class="svc-card" data-key="catalogo">
+          <div class="card-inner">
+            <div class="svc-left">
+              <div class="svc-head">
+                <div class="svc-tagcolor">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#2f9bff" stroke-width="2"><path d="M4 7l8-4 8 4-8 4-8-4zM4 7v10l8 4 8-4V7"/></svg>
+                </div>
+                <div>
+                  <h3>Catálogos de exhibición</h3>
+                  <div class="sub">Ropa, tenis, muebles y más</div>
+                </div>
+              </div>
+              <div class="tier-tabs">
+                <button class="tier-tab active" data-tier="basico">Básico</button>
+                <button class="tier-tab" data-tier="intermedio">Intermedio</button>
+                <button class="tier-tab" data-tier="alto">Alto</button>
+              </div>
+              <div class="tier-price"><span class="amt">$3,500</span><span class="per">MXN</span></div>
+              <p class="tier-desc">Catálogo ideal para exhibir tus productos con filtros y diseño profesional.</p>
+            </div>
+            <div class="svc-right">
+              <div class="mock">
+                <div class="mock-title">COLECCIÓN</div>
+                <div class="mock-row"><span>▢ Tenis urbanos</span><span>$1,450</span></div>
+                <div class="mock-row"><span>▢ Chamarra denim</span><span>$980</span></div>
+                <div class="mock-row"><span>▢ Sala modular</span><span>$8,200</span></div>
+              </div>
+              <ul class="feat-list">
+                <li>1 interfaz (Página principal / Landing de exhibición).</li>
+                <li>Hasta 15 productos.</li>
+                <li>Código QR personalizado.</li>
+                <li>Diseño responsivo (adaptable a celulares y tablets).</li>
+              </ul>
+              <div class="card-footer">
+                <div class="note-tag"><b>NOTA:</b> Actualizaciones de productos o diseño son aparte con costo extra.</div>
+                <div class="adicional-tag"></div>
+                <div class="ideal-tag">IDEAL PARA: Tiendas de ropa medianas, refaccionarias, importadores</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporativas -->
+        <div class="svc-card" data-key="corporativa">
+          <div class="card-inner">
+            <div class="svc-left">
+              <div class="svc-head">
+                <div class="svc-tagcolor">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#9b4dff" stroke-width="2"><path d="M3 21h18M6 21V7l6-4 6 4v14M10 21v-6h4v6"/></svg>
+                </div>
+                <div>
+                  <h3>Presentación corporativa</h3>
+                  <div class="sub">Sitios institucionales</div>
+                </div>
+              </div>
+              <div class="tier-tabs">
+                <button class="tier-tab active" data-tier="basico">Básico</button>
+                <button class="tier-tab" data-tier="intermedio">Intermedio</button>
+                <button class="tier-tab" data-tier="alto">Alto</button>
+              </div>
+              <div class="tier-price"><span class="amt">$3,200</span><span class="per">MXN</span></div>
+              <p class="tier-desc">Landing de una sola página, directa y profesional.</p>
+            </div>
+            <div class="svc-right">
+              <div class="mock">
+                <div class="mock-title">TU NEGOCIO</div>
+                <div class="mock-row"><span>Quiénes somos</span><span>·</span></div>
+                <div class="mock-row"><span>Servicios · Contacto</span><span>·</span></div>
+                <div class="mock-row"><span>“Impulsa tu empresa”</span><span></span></div>
+              </div>
+              <ul class="feat-list">
+                <li>1 interfaz (Tipo One Page / Página de presentación ejecutiva).</li>
+                <li>Sección de Quiénes somos, Servicios y Contacto.</li>
+                <li>Código QR corporativo.</li>
+                <li>Diseño responsivo.</li>
+              </ul>
+              <div class="card-footer">
+                <div class="note-tag"><b>NOTA:</b> Actualizaciones de información o diseño son aparte con costo extra.</div>
+                <div class="adicional-tag"></div>
+                <div class="ideal-tag">IDEAL PARA: Despachos, consultorías, empresas de servicios</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title section-gap">
+        <div class="section-title-badge">Páginas web dinámicas</div>
+        <h2>Páginas web dinámicas</h2>
+        <p class="lede">Aplicaciones con base de datos, lógica de negocio y procesamiento real de información: donde tu operación diaria realmente sucede.</p>
+      </div>
+
+      <div class="dyn-grid">
+        <!-- Control de Personal -->
+        <div class="dyn-card" data-key="personal">
+          <div class="card-inner">
+            <div class="card-body">
+              <h3>Control de personal</h3>
+              <div class="sub">Altas, asistencias y expedientes en un solo lugar</div>
+              <div class="dyn-tier-tabs">
+                <button class="active" data-tier="basico">Básico</button>
+                <button data-tier="intermedio">Intermedio</button>
+                <button data-tier="alto">Alto</button>
+              </div>
+              <div class="tier-price"><span class="amt">$4,500</span><span class="per">MXN</span></div>
+              <p class="tier-desc">Registro esencial de empleados y asistencias, listo para operar desde el día uno.</p>
+              <div class="dyn-panel">
+                <div class="dyn-panel-head"><span>CLIENTES / PERSONAL</span><span>+ NUEVO</span></div>
+                <table class="mini">
+                  <tr><th>Nombre</th><th>Plan</th><th>Próx. pago</th><th>Estado</th></tr>
+                  <tr><td>Ana López</td><td>Mensual</td><td>01/06</td><td><span class="badge active">Activo</span></td></tr>
+                  <tr><td>Luis García</td><td>Mensual</td><td>05/06</td><td><span class="badge active">Activo</span></td></tr>
+                  <tr><td>Carlos Ruiz</td><td>Mensual</td><td>15/06</td><td><span class="badge pend">Pendiente</span></td></tr>
+                </table>
+              </div>
+              <ul class="feat-list">
+                <li>Alta de hasta 30 empleados / alumnos / socios.</li>
+                <li>Asistencia manual.</li>
+                <li>Expedientes básicos.</li>
+                <li>Reportes mensuales.</li>
+                <li>Diseño responsivo y código QR para control o acceso rápido.</li>
+              </ul>
+              <div class="card-footer">
+                <div class="note-tag"><b>NOTA:</b> Actualizaciones de registros o diseño son aparte con costo extra.</div>
+                <div class="adicional-tag"></div>
+                <div class="ideal-tag">IDEAL PARA: Talleres, oficinas, pequeños negocios con equipo, estudios pequeños o academias locales.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Punto de Venta -->
+        <div class="dyn-card" data-key="pos">
+          <div class="card-inner">
+            <div class="card-body">
+              <h3>Ventas y punto de venta</h3>
+              <div class="sub">Alta de productos, búsqueda y cobro automático</div>
+              <div class="dyn-tier-tabs">
+                <button class="active" data-tier="basico">Básico</button>
+                <button data-tier="intermedio">Intermedio</button>
+                <button data-tier="alto">Alto</button>
+              </div>
+              <div class="tier-price"><span class="amt">$2,500</span><span class="per">MXN</span></div>
+              <p class="tier-desc">Cobro rápido y control de su catálogo de ventas.</p>
+              <div class="dyn-panel">
+                <div class="dyn-panel-head"><span>INVENTARIO</span><span>STOCK BAJO: 18</span></div>
+                <div class="stat-trio">
+                  <div class="stat-box"><b>845</b><span>PROD</span></div>
+                  <div class="stat-box"><b>24</b><span>CAT</span></div>
+                  <div class="stat-box"><b>$36k</b><span>VENTA</span></div>
+                </div>
+              </div>
+              <ul class="feat-list">
+                <li>Alta de hasta 150 productos.</li>
+                <li>Cobro manual.</li>
+                <li>Ticket digital.</li>
+                <li>Reporte de venta diario.</li>
+              </ul>
+              <div class="card-footer">
+                <div class="note-tag"><b>NOTA:</b> Actualizaciones de inventario son con costo extra.</div>
+                <div class="adicional-tag"></div>
+                <div class="ideal-tag">IDEAL PARA: abarrotes, farmacias, tiendas de retail</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="brand">
+      <img class="brand-mark" src="imagenes/Logo-circulo.png" alt="Logo GAMA" width="34" height="34">
+      <div class="brand-text"><span class="word">GAMA</span><span class="tag">SOLUCIONES TECNOLÓGICAS</span></div>
+    </div>
+    <div class="foot-links">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo de páginas</a>
+      <a href="soporte.html">Soporte</a>
+    </div>
+    <div class="foot-copy">© 2026 GAMA · Todos los derechos reservados</div>
+  </div>
+</footer>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.querySelectorAll('.svc-card, .dyn-card').forEach((card) => {
+    gsap.fromTo(card, 
+      { opacity: 0, scale: 0.9, y: 50 },
+      {
+        opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "power2.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+  });
+
+  const tierData = {
+    menu: {
+      basico: { 
+        price: "$3,500", 
+        desc: "Menú digital esencial en 1 interfaz, listo para compartir por QR o redes.", 
+        feats: ["1 interfaz (Página principal / Landing de exhibición).", "Hasta 15 productos.", "Código QR personalizado.", "Diseño responsivo (adaptable a celulares y tablets)."], 
+        note: "<b>NOTA:</b> Actualizaciones de productos o diseño son aparte con costo extra.",
+        adicional: "",
+        ideal: "IDEAL PARA: restaurantes, cafés, food trucks", 
+        mockTitle: "MENÚ BÁSICO", 
+        mockRows: [["Especialidad", "$120"], ["Bebida", "$40"], ["Postre", "$60"]] 
+      },
+      intermedio: { 
+        price: "$6,500", 
+        desc: "Menú interactivo completo con múltiples interfaces y soporte multilingüe.", 
+        feats: ["De 1 a 3 interfaces (Inicio, Categorías y Detalle de producto).", "Hasta 30 productos.", "Código QR personalizado.", "Diseño responsivo.", "Filtros básicos de búsqueda (por categoría).", "Actualización de diseño y productos (válido 2 meses)."], 
+        note: "<b>NOTA:</b> Después de los dos meses, las actualizaciones de productos o diseño son aparte con costo extra.",
+        adicional: "",
+        ideal: "IDEAL PARA: restaurantes establecidos, bares, pizzerías", 
+        mockTitle: "MENÚ INTERMEDIO", 
+        mockRows: [["🖼 Interfaz 1-3", "Categorías"], ["Filtros búsqueda", "✓"], ["ES / EN", "✓"]] 
+      },
+      alto: { 
+        price: "$11,500", 
+        desc: "Experiencia de menú digital avanzado de alto impacto con animaciones y reservas.", 
+        feats: ["De 1 a 5 interfaces (Estructura completa y personalizada).", "Productos ilimitados.", "Código QR personalizado.", "Diseño responsivo de alta gama.", "Animaciones y efectos visuales.", "Buscador interno avanzado de productos.", "Botón de pedido o cotización directa por WhatsApp por cada producto.", "Actualización de diseño y productos (válido 3 meses)."], 
+        note: "<b>NOTA:</b> Después de los tres meses, las actualizaciones de productos o diseño son con costo extra.",
+        adicional: "<b>[ + ] Adicional a la medida:</b> Añade cualquier función especial no contemplada originalmente (cotizador dinámico, multi-moneda, conexión con APIs externas, etc.). Cotización según requerimiento.",
+        ideal: "IDEAL PARA: cadenas de restaurantes, alta cocina, franquicias", 
+        mockTitle: "MENÚ ALTO NIVEL", 
+        mockRows: [["📱 Interfaces", "1 a 5"], ["💬 WhatsApp", "Reservación directa"], ["Animaciones", "✓"]] 
+      }
+    },
+    catalogo: {
+      basico: { 
+        price: "$3,500", 
+        desc: "Catálogo esencial para exhibir tus productos con código QR y diseño responsivo.", 
+        feats: ["1 interfaz (Página principal / Landing de exhibición).", "Hasta 15 productos.", "Código QR personalizado.", "Diseño responsivo (adaptable a celulares y tablets)."], 
+        note: "<b>NOTA:</b> Actualizaciones de productos o diseño son aparte con costo extra.",
+        adicional: "",
+        ideal: "IDEAL PARA: Tiendas de ropa medianas, refaccionarias, importadores", 
+        mockTitle: "CATÁLOGO BÁSICO", 
+        mockRows: [["▢ Tenis urbanos", "$1,450"],["▢ Chamarra", "$980"],["▢ Sala modular", "$8,200"]] 
+      },
+      intermedio: { 
+        price: "$6,500", 
+        desc: "Catálogo organizado con múltiples interfaces, hasta 30 productos y filtros de búsqueda.", 
+        feats: ["De 1 a 3 interfaces (Inicio, Categorías y Detalle de producto).", "Hasta 30 productos.", "Código QR personalizado.", "Diseño responsivo.", "Filtros básicos de búsqueda (por categoría).", "Actualización de diseño y productos (válido 2 meses)."], 
+        note: "<b>NOTA:</b> Después de los dos meses, las actualizaciones de productos o diseño son aparte con costo extra.",
+        adicional: "",
+        ideal: "IDEAL PARA: Boutiques, tiendas de calzado, mueblerías", 
+        mockTitle: "CATÁLOGO INTERMEDIO", 
+        mockRows: [["Filtros categoría", "✓"], ["Hasta 30 prod.", "✓"], ["2 meses soporte", "✓"]] 
+      },
+      alto: { 
+        price: "$11,500", 
+        desc: "Solución integral de comercio visual e interactivo de gama alta para mayoristas y marcas.", 
+        feats: ["De 1 a 5 interfaces (Estructura completa y personalizada).", "Productos ilimitados.", "Código QR personalizado.", "Diseño responsivo de alta gama.", "Animaciones y efectos visuales.", "Buscador interno avanzado de productos.", "Botón de pedido o cotización directa por WhatsApp por cada producto.", "Actualización de diseño y productos (válido 3 meses)."], 
+        note: "<b>NOTA:</b> Después de los tres meses, las actualizaciones de productos o diseño son con costo extra.",
+        adicional: "<b>[ + ] Adicional a la medida:</b> Añade cualquier función especial no contemplada originalmente (cotizador dinámico, multi-moneda, conexión con APIs externas, etc.). Cotización según requerimiento.",
+        ideal: "IDEAL PARA: Marcas de e-commerce, distribuidores mayoristas", 
+        mockTitle: "CATÁLOGO ALTO NIVEL", 
+        mockRows: [["Productos", "Ilimitados"], ["Buscador av.", "✓"], ["WhatsApp dir.", "✓"]] 
+      }
+    },
+    corporativa: {
+      basico: { 
+        price: "$3,200", 
+        desc: "Presentación ejecutiva tipo One Page con diseño profesional y QR corporativo.", 
+        feats: ["1 interfaz (Tipo One Page / Página de presentación ejecutiva).", "Sección de Quiénes somos, Servicios y Contacto.", "Código QR corporativo.", "Diseño responsivo."], 
+        note: "<b>NOTA:</b> Actualizaciones de información o diseño son aparte con costo extra.",
+        adicional: "",
+        ideal: "IDEAL PARA: Despachos, consultorías, empresas de servicios", 
+        mockTitle: "CORPORATIVA BÁSICA", 
+        mockRows: [["Quiénes somos", "·"], ["Servicios", "·"], ["Contacto", "·"]] 
+      },
+      intermedio: { 
+        price: "$5,800", 
+        desc: "Sitio corporativo de múltiples interfaces con formulario y redes sociales.", 
+        feats: ["De 1 a 3 interfaces (Inicio, Servicios detallados, Portafolio/Casos de éxito y Contacto).", "Código QR corporativo.", "Sección de Quiénes somos, Servicios y Contacto.", "Diseño responsivo.", "Formulario de contacto integrado.", "Enlaces directos a redes sociales o correo.", "Actualización de información y diseño (válido 2 meses)."], 
+        note: "<b>NOTA:</b> Después de los dos meses, las actualizaciones de información o diseño son aparte con costo extra.",
+        adicional: "",
+        ideal: "IDEAL PARA: Agencias, clínicas, constructoras", 
+        mockTitle: "CORPORATIVA INTERMEDIA", 
+        mockRows: [["1 a 3 interfaces", "✓"], ["Formulario", "✓"], ["Redes sociales", "✓"]] 
+      },
+      alto: { 
+        price: "$9,800", 
+        desc: "Sitio web corporativo de alta gama con animaciones, mapa interactivo y botón flotante de WhatsApp.", 
+        feats: ["De 1 a 5 interfaces (Corporativa completa: Inicio, Nosotros, Servicios, Equipo, Galería/Portafolio y Contacto).", "Código QR corporativo con diseño exclusivo.", "Diseño responsivo avanzado.", "Animaciones corporativas y transiciones fluidas.", "Integración de mapa interactivo y botón de WhatsApp flotante.", "Actualización de información y diseño (válido 3 meses)."], 
+        note: "<b>NOTA:</b> Después de los tres meses, las actualizaciones de información o diseño son con costo extra.",
+        adicional: "<b>[ + ] Adicional a la medida:</b> Añade cualquier función especial no contemplada originalmente (área de clientes/login, calculadora de presupuestos, pasarela de datos corporativa, etc.). Cotización según requerimiento.",
+        ideal: "IDEAL PARA: Corporativos, firmas legales y financieras de gran escala", 
+        mockTitle: "CORPORATIVA ALTO NIVEL", 
+        mockRows: [["1 a 5 interfaces", "✓"], ["Mapa interactivo", "✓"], ["WhatsApp flotante", "✓"]] 
+      }
+    }
+  };
+
+  const updateCardContent = (card, data) => {
+    const featList = card.querySelector('.feat-list');
+    const priceEl = card.querySelector('.tier-price .amt');
+    const descEl = card.querySelector('.tier-desc');
+    const idealEl = card.querySelector('.ideal-tag');
+    const noteEl = card.querySelector('.note-tag');
+    const adicionalEl = card.querySelector('.adicional-tag');
+
+    featList.innerHTML = data.feats.map(f => `<li>${f}</li>`).join('');
+    priceEl.textContent = data.price;
+    descEl.textContent = data.desc;
+
+    if (noteEl) {
+      if (data.note) {
+        noteEl.style.display = 'block';
+        noteEl.innerHTML = data.note;
+      } else {
+        noteEl.style.display = 'none';
+      }
+    }
+
+    if (adicionalEl) {
+      if (data.adicional) {
+        adicionalEl.style.display = 'block';
+        adicionalEl.innerHTML = data.adicional;
+      } else {
+        adicionalEl.style.display = 'none';
+      }
+    }
+
+    if (idealEl) idealEl.textContent = data.ideal;
+  };
+
+  document.querySelectorAll('.svc-card').forEach(card => {
+    const key = card.dataset.key;
+    const tabs = card.querySelectorAll('.tier-tab');
+    const mockEl = card.querySelector('.mock');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const data = tierData[key][tab.dataset.tier];
+        updateCardContent(card, data);
+
+        if (mockEl && data.mockTitle) {
+          mockEl.innerHTML = `<div class="mock-title">${data.mockTitle}</div>` + data.mockRows.map(r => `<div class="mock-row"><span>${r[0]}</span><span>${r[1]}</span></div>`).join('');
+        }
+      });
+    });
+  });
+
+  const dynTierData = {
+    personal: {
+      basico: { 
+        price: "$4,500", 
+        desc: "Registro esencial de empleados y asistencias, listo para operar desde el día uno.", 
+        feats: ["Alta de hasta 30 empleados / alumnos / socios.", "Asistencia manual.", "Expedientes básicos.", "Reportes mensuales.", "Diseño responsivo y código QR para control o acceso rápido."], 
+        note: "<b>NOTA:</b> Actualizaciones de registros o diseño son aparte con costo extra.",
+        adicional: "",
+        ideal: "IDEAL PARA: Talleres, oficinas, pequeños negocios con equipo, estudios pequeños o academias locales." 
+      },
+      intermedio: { 
+        price: "$7,900", 
+        desc: "Control completo de personal con turnos, turnos y formularios personalizados.", 
+        feats: ["Alta masiva de usuarios.", "Control de asistencias con horario / turnos.", "Formularios personalizados (inscripciones, registros o reportes diarios).", "Expedientes digitales completos.", "Actualización y soporte (válido 2 meses)."], 
+        note: "<b>NOTA:</b> Después de los dos meses, las actualizaciones son aparte con costo extra.",
+        adicional: "",
+        ideal: "IDEAL PARA: Empresas medianas, agencias, centros de trabajo, escuelas secundarias/academias y gimnasios medianos." 
+      },
+      alto: { 
+        price: "$13,500", 
+        desc: "Gestión avanzada de personal con geolocalización y módulo de nómina o mensualidades.", 
+        feats: ["Usuarios y empleados ilimitados.", "Control de asistencia con geolocalización o validación por dispositivos avanzados.", "Módulo de nómina integrada / control de pagos, mensualidades o colegiaturas.", "Reportes avanzados y métricas de rendimiento o asistencia en tiempo real.", "Actualización y soporte (válido 3 meses)."], 
+        note: "<b>NOTA:</b> Después de los tres meses, las actualizaciones son con costo extra.",
+        adicional: "<b>[ + ] Adicional a la medida:</b> Añade cualquier función especial no contemplada originalmente (lector biométrico/huella, pasarela de pagos automática de membresías, portal de padres de familia, etc.). Cotización según requerimiento.",
+        ideal: "IDEAL PARA: Corporativos con múltiples departamentos y sucursales, instituciones educativas grandes y cadenas de gimnasios." 
+      }
+    },
+    pos: {
+      basico: { 
+        price: "$2,500", 
+        desc: "Cobro rápido y control de su catálogo de ventas.", 
+        feats: ["Alta de hasta 150 productos.", "Cobro manual.", "Ticket digital.", "Reporte de venta diario."], 
+        note: "<b>NOTA:</b> Actualizaciones de inventario son con costo extra.",
+        adicional: "",
+        ideal: "IDEAL PARA: abarrotes, farmacias, tiendas de retail" 
+      },
+      intermedio: { 
+        price: "$4,200", 
+        desc: "Punto de venta completo con inventario y reportes avanzados.", 
+        feats: ["Alta de productos.", "Búsqueda y escaneo.", "Cálculo automático de total.", "Reportes de venta."], 
+        note: "<b>NOTA:</b> Actualizaciones de inventario son con costo extra.",
+        adicional: "",
+        ideal: "IDEAL PARA: minimercados, zapaterías, puntos de venta activos" 
+      },
+      alto: { 
+        price: "$6,800", 
+        desc: "Punto de venta multi-sucursal con inventario en tiempo real.", 
+        feats: ["Productos ilimitados.", "Multi-sucursal.", "Inventario en tiempo real.", "Reportes avanzados y exportables."], 
+        note: "<b>NOTA:</b> Actualizaciones de inventario son con costo extra.",
+        adicional: "<b>[ + ] Adicional a la medida:</b> Añade cualquier función especial no contemplada originalmente (conexión con básculas, cajón de dinero automático, etc.). Cotización según requerimiento.",
+        ideal: "IDEAL PARA: cadenas de tiendas, negocios con almacenes múltiples" 
+      }
+    }
+  };
+
+  document.querySelectorAll('.dyn-card').forEach(card => {
+    const key = card.dataset.key;
+    const tabs = card.querySelectorAll('.dyn-tier-tabs button');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const data = dynTierData[key][tab.dataset.tier];
+        updateCardContent(card, data);
+      });
+    });
+  });
+
+  document.getElementById('burgerBtn').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

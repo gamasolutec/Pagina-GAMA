@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" style="background: #060713; border-radius: 14px; border: 1px solid rgba(47, 155, 255, 0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.8);">
+  <defs>
+    <!-- Filtros de Resplandor Neón -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <filter id="glow-magenta" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gradientes de Identidad -->
+    <linearGradient id="grad-core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f9bff" />
+      <stop offset="100%" stop-color="#ff2fae" />
+    </linearGradient>
+
+    <!-- Patrón de Fondo -->
+    <pattern id="grid-pattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(47, 155, 255, 0.05)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Fondo Base -->
+  <rect width="100%" height="100%" fill="#05060d" />
+  <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+
+  <!-- Círculos de Órbita Corporativa -->
+  <circle cx="300" cy="200" r="130" fill="none" stroke="rgba(155, 77, 255, 0.15)" stroke-width="1.5" stroke-dasharray="6,6" />
+  <circle cx="300" cy="200" r="80" fill="none" stroke="rgba(47, 155, 255, 0.2)" stroke-width="1" />
+
+  <!-- Líneas de Conexión de Identidad (Conectando el núcleo con los pilares) -->
+  <g stroke="rgba(47, 155, 255, 0.4)" stroke-width="2" fill="none">
+    <line x1="300" y1="200" x2="150" y2="110" />
+    <line x1="300" y1="200" x2="450" y2="110" />
+    <line x1="300" y1="200" x2="150" y2="290" />
+    <line x1="300" y1="200" x2="450" y2="290" />
+  </g>
+
+  <!-- Pulsos de Neón Activos -->
+  <g fill="none" stroke-width="2">
+    <path d="M 300,200 L 150,110" stroke="#2f9bff" filter="url(#glow-cyan)" />
+    <path d="M 300,200 L 450,110" stroke="#9b4dff" filter="url(#glow-cyan)" />
+    <path d="M 300,200 L 150,290" stroke="#ff2fae" filter="url(#glow-magenta)" />
+    <path d="M 300,200 L 450,290" stroke="#23e88a" filter="url(#glow-cyan)" />
+  </g>
+
+  <!-- NÚCLEO CENTRAL: IDENTIDAD GAMA -->
+  <g transform="translate(300,200)">
+    <circle cx="0" cy="0" r="50" fill="rgba(11, 15, 29, 0.9)" stroke="url(#grad-core)" stroke-width="3" filter="url(#glow-cyan)" />
+    <!-- Símbolo de Conexión Humana / Equipo Técnico -->
+    <circle cx="0" cy="-12" r="10" fill="#2f9bff" />
+    <path d="M -16,12 C -16,4 16,4 16,12" fill="none" stroke="#ff2fae" stroke-width="3" stroke-linecap="round" />
+    <circle cx="0" cy="0" r="52" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.4" />
+  </g>
+
+  <!-- NODO 1: INGENIERÍA DE SOFTWARE (Superior Izquierda) -->
+  <g transform="translate(150,110)">
+    <rect x="-35" y="-25" width="70" height="50" rx="10" fill="#0b0f1d" stroke="#2f9bff" stroke-width="2" filter="url(#glow-cyan)" />
+    <text x="0" y="5" fill="#e3e9f5" font-family="'Orbitron', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">SOFTWARE</text>
+    <circle cx="0" cy="-25" r="4" fill="#2f9bff" />
+  </g>
+
+  <!-- NODO 2: TRANSFORMACIÓN DIGITAL (Superior Derecha) -->
+  <g transform="translate(450,110)">
+    <rect x="-35" y="-25" width="70" height="50" rx="10" fill="#0b0f1d" stroke="#9b4dff" stroke-width="2" filter="url(#glow-cyan)" />
+    <text x="0" y="5" fill="#e3e9f5" font-family="'Orbitron', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">DIGITAL</text>
+    <circle cx="0" cy="-25" r="4" fill="#9b4dff" />
+  </g>
+
+  <!-- NODO 3: CONSULTORÍA Y DATOS (Inferior Izquierda) -->
+  <g transform="translate(150,290)">
+    <rect x="-35" y="-25" width="70" height="50" rx="10" fill="#0b0f1d" stroke="#ff2fae" stroke-width="2" filter="url(#glow-magenta)" />
+    <text x="0" y="5" fill="#e3e9f5" font-family="'Orbitron', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">DATOS</text>
+    <circle cx="0" cy="25" r="4" fill="#ff2fae" />
+  </g>
+
+  <!-- NODO 4: SOPORTE Y CALIDAD (Inferior Derecha) -->
+  <g transform="translate(450,290)">
+    <rect x="-35" y="-25" width="70" height="50" rx="10" fill="#0b0f1d" stroke="#23e88a" stroke-width="2" filter="url(#glow-cyan)" />
+    <text x="0" y="5" fill="#e3e9f5" font-family="'Orbitron', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">SOPORTE</text>
+    <circle cx="0" cy="25" r="4" fill="#23e88a" />
+  </g>
+
+  <!-- Textos de cabecera decorativos -->
+  <text x="35" y="45" fill="#2f9bff" opacity="0.6" font-family="'Share Tech Mono', monospace" font-size="11">TEAM_CORE: GAMA_EXPERTISE</text>
+  <text x="415" y="380" fill="#ff2fae" opacity="0.6" font-family="'Share Tech Mono', monospace" font-size="11">MISSION: EXCELLENCE</text>
+</svg>
